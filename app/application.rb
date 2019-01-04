@@ -19,8 +19,8 @@ class Application
         resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
-      cart_items = req.params["item"]
-      resp.write handle_add(cart_items)
+      cart_item = req.params["item"]
+      resp.write handle_add(cart_item)
     else
       resp.write "Path Not Found"
     end
